@@ -3,7 +3,7 @@ layout: post
 categories: Projects
 title: "Silk route the game"
 permalink: "/Portfolio/Silk-route/"
-related_image: "/docs/assets/image/Silkroutegame.png"
+related_image: "/docs/assets/images/Silkroutegame.png"
 Width: "100"
 Height: "100"
 ---
