@@ -1,5 +1,6 @@
 ---
-layout: CV
+layout: about
 title: CV
 permalink: /CV/
 ---
+Hello
