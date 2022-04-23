@@ -2,11 +2,11 @@
 layout: post
 categories: Projects
 permalink: "/Game-show/Boss-Slayers/"
-related_image: "{{ site.url }}/docs/assets/images/BossSlayers.png"
+related_image: "/docs/assets/images/BossSlayers.png"
 Width: "200"
 Height: "300"
 ---
-![My helpful screenshot]({{ site.url }}/docs/assets/images/BossSlayers.png)
+![My helpful screenshot](/docs/assets/images/BossSlayers.png)
 
 
 This is a school project, created by three students.
