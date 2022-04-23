@@ -4,8 +4,8 @@ categories: Projects
 title: "Silk route the game"
 permalink: "/Game-Show/Silk-route/"
 related_image: "/assets/image/Silkroutegame.png"
-Width: "400"
-Height: "250"
+Width: "100"
+Height: "100"
 ---
 ![My helpful screenshot](/assets/image/Silkroutegame.png)
 
