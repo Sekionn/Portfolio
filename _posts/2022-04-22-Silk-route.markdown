@@ -3,11 +3,11 @@ layout: post
 categories: Projects
 title: "Silk route the game"
 permalink: "/Portfolio/Silk-route/"
-related_image: "/docs/assets/images/Silkroutegame.png"
+related_image: "/docs/assets/images/silkroutegame.png"
 Width: "100"
 Height: "100"
 ---
-![My helpful screenshot](/docs/assets/images/Silkroutegame.png)
+![My helpful screenshot](/docs/assets/images/silkroutegame.png)
 
 This is a simulation game about expanding chinas traderoute through europe called: the silk route.
 
