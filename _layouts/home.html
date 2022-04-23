@@ -1,0 +1,12 @@
+{% for post in site.posts %}
+    <ul class="post-list"><li><span class="post-meta"></span>
+      <h3>
+        <a class="post-link" href="{{ post.url }}">
+            {{ post.title }}
+        </a>
+      </h3>
+
+      <img src="{{ post.related_image }}" alt="CoverImage" width="{{ post.Width }}" height="{{ post.Height }}">
+    </li></ul>
+    <br>
+{% endfor %}
