@@ -2,7 +2,7 @@
 layout: post
 categories: Projects
 title: "Silk route the game"
-permalink: "/Portfolio/Silk-route/"
+permalink: "/Silk-route/"
 related_image: "/Portfolio/docs/assets/images/silkroutegame.png"
 Width: "100"
 Height: "100"

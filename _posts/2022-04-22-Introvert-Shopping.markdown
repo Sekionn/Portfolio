@@ -1,12 +1,12 @@
 ---
 layout: post
 categories: Projects
-permalink: "/Game-Show/Introvert-Shopping/"
-related_image: "/docs/assets/images/IntroShop.png"
+permalink: "/Introvert-Shopping/"
+related_image: "/Portfolio/docs/assets/images/IntroShop.png"
 Width: "400"
 Height: "250"
 ---
-![My helpful screenshot](/docs/assets/images/IntroShop.png)
+![My helpful screenshot](/Portfolio/docs/assets/images/IntroShop.png)
 
 This Game is about an introvert going out shopping.
 

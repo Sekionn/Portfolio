@@ -2,13 +2,13 @@
 layout: post
 categories: Projects
 title: "School: A tower defense story"
-permalink: "/Game-Show/School-A-tower-defense-story/"
-related_image: "/docs/assets/images/School.png"
+permalink: "/School-A-tower-defense-story/"
+related_image: "/Portfolio/docs/assets/images/School.png"
 Width: "400"
 Height: "250"
 ---
 
-![My helpful screenshot](/docs/assets/images/School.png)
+![My helpful screenshot](/Portfolio/docs/assets/images/School.png)
 
 This is the story of a school, that tries to grow larger 
 

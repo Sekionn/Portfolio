@@ -1,12 +1,12 @@
 ---
 layout: post
 categories: Projects
-permalink: "/Game-show/Escape/"
-related_image: "/docs/assets/images/Escape.png"
+permalink: "/Escape/"
+related_image: "/Portfolio/docs/assets/images/Escape.png"
 Width: "400"
 Height: "300"
 ---
-![My helpful screenshot](/docs/assets/images/Escape.png)
+![My helpful screenshot](/Portfolio/docs/assets/images/Escape.png)
 
 This Game is a local two player coop game
 
