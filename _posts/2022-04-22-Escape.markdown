@@ -20,4 +20,4 @@ This is a school project, created by Four students.
 
 If you want to try the game [click here][1] to download.
 
-[1]:{{ site.url }}/Downloads/Escape.zip
+[1]:{{ site.url }}/Portfolio/Downloads/Escape.zip

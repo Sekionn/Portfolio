@@ -20,4 +20,4 @@ main controls are: w, a, s, d and the mouse.
 
 If you want to try the game [click here][1] to download.
 
-[1]:{{ site.url }}/Downloads/BossSlayers Demo.zip
+[1]:{{ site.url }}/Portfolio/Downloads/BossSlayers.zip

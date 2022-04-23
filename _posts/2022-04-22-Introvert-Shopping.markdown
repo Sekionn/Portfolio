@@ -23,4 +23,4 @@ The game is only in danish and a school project, created by three students.
 If you want to try the game [click here][1] to download.
 
 
-[1]:{{ site.url }}/Downloads/Introvert-Shopping.zip
+[1]:{{ site.url }}/Portfolio/Downloads/IntrovertShopping.zip

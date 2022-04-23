@@ -4,4 +4,7 @@
 
 layout: home
 ---
-{{ site.description | escape }}
+Welcome to the portfolio of Sebastian Juul Knudsen.
+
+Here you can find different projects i have worked on
+and at the top of the page you can also checkout my CV.

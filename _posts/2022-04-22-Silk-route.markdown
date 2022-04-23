@@ -19,4 +19,4 @@ This is a school project, created by five students.
 If you want to try the game [click here][1] to download.
 
 
-[1]:{{ site.url }}/Downloads/Silkroute.zip
+[1]:{{ site.url }}/Portfolio/Downloads/Silkroute.zip

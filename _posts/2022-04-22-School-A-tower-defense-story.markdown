@@ -24,4 +24,4 @@ This is a school project, created by three students.
 If you want to try the game [click here][1] to download.
 
 
-[1]:{{ site.url }}/Downloads/School.zip
+[1]:{{ site.url }}/Portfolio/Downloads/School.zip
