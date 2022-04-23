@@ -7,6 +7,9 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
+source "https://rubygems.pkg.github.com/mihajlonesic" do
+  gem "jekyll-pdf-embed", "1.1.2.1"
+end
 gem "jekyll", "~> 4.2.2"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
