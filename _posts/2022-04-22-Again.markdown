@@ -2,11 +2,11 @@
 layout: post
 categories: Projects
 permalink: "/Game-show/Again/"
-related_image: "{{ site.url }}/docs/assets/images/again.png"
+related_image: "/docs/assets/images/again.png"
 Width: "400"
 Height: "300"
 ---
-![My helpful screenshot]({{ site.url }}/docs/assets/images/again.png)
+![My helpful screenshot](/docs/assets/images/again.png)
 
 Developed by 7 studens from Vallekilde Højskoles Spiludviking line during Nordic Game Jam 2019.
 
