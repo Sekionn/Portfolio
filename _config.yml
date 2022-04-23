@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the portfolio of Sebastian Juul Knudsen
 baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin_username: Sebastian Juul Knudsen
+linkedin_username: Sebastian-Juul-Knudsen
 
 # Build settings
 theme: minima
