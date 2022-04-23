@@ -2,11 +2,11 @@
 layout: post
 categories: Projects
 permalink: "/Game-Show/Introvert-Shopping/"
-related_image: "{{ site.url }}/docs/assets/images/IntroShop.png"
+related_image: "/docs/assets/images/IntroShop.png"
 Width: "400"
 Height: "250"
 ---
-![My helpful screenshot]({{ site.url }}/docs/assets/images/IntroShop.png)
+![My helpful screenshot](/docs/assets/images/IntroShop.png)
 
 This Game is about an introvert going out shopping.
 
