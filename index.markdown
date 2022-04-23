@@ -4,3 +4,4 @@
 
 layout: home
 ---
+{{ site.description | escape }}

@@ -31,6 +31,7 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        <img src="{{ post.related_image }}" alt="cover image" height="{{ post.Height }}" width="{{ post.Width }}">
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
