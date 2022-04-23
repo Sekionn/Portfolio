@@ -5,7 +5,7 @@ permalink: /CV/
 file_document_path: "/Portfolio/docs/assets/CV-Sebastian-Juul-Knudsen-English.pdf"
 ---
 
-{% {{ page.file_document_path }} width=1000px height=1000px %}
+{% pdf {{ page.file_document_path }} width=1000px height=1000px %}
 If you want to try the game [click here][1] to download.
 
 
