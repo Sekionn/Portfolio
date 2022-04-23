@@ -4,8 +4,3 @@
 
 layout: home
 ---
-
-Checkout my CV [by clicking here][1].
-
-
-[1]:{{ site.url }}/Portfolio/docs/assets/CV-Sebastian-Juul-Knudsen-English.pdf
