@@ -7,9 +7,9 @@
 .slider {
     position: absolute;
     left: 30%;
-    top: 30%;
+    top: 50%;
     width: 40vw;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -21,7 +21,6 @@
     gap: 15px;
     pointer-events: none;
     transition: 0s ease-in;
-    align-items: center;
 }
 
 .slide-img {

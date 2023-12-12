@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import ShowProject from './ShowProject';
 
 let pressed = false;
 let startX: number;
@@ -11,8 +10,6 @@ let areas: Array<PreviewObject> = [
   { name: "Introvert Shopping", img: "./Images/ProjectImages/IntroShop.png" },
   { name: "School", img: "./Images/ProjectImages/School.png" },
   { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png" }];
-
-let projectSelected: boolean = false;
 
 function handleEvent(event: any) {
   const slider = document.querySelector(".slider") as HTMLDivElement;
@@ -53,7 +50,7 @@ function checkBoundaries(inner: HTMLDivElement) {
 }
 
 function App() {
-  if (!projectSelected) {
+
     return (
       <div className="App">
         <body style={{ overflow: "hidden" }}>
@@ -70,24 +67,6 @@ function App() {
         </body>
       </div>
     );
-  } else {
-    return (
-      <div className="App">
-        <body style={{ overflow: "hidden" }}>
-          <img src='Images/Show.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
-          <div className="slider" onMouseEnter={handleEvent} onMouseDown={handleEvent} onMouseMove={handleMouseMove} onMouseLeave={handleEvent} onMouseUp={handleEvent}>
-            <div className='slider-inner' >
-              {areas.map((area) => (
-                <div className='slide-img' > {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
-                  {area.name}
-                </div>
-              ))}
-            </div>
-          </div>
-        </body>
-      </div>
-    );
-  }
   
 }
 
