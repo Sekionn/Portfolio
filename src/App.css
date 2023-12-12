@@ -6,29 +6,38 @@
 
 .slider {
     position: absolute;
-    left: 25%;
+    left: 30%;
     top: 30%;
-    width: 50vw;
+    width: 40vw;
     height: 400px;
     overflow: hidden;
 }
 
 .slider-inner {
     position: absolute;
-    top: 37%;
     left: 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     pointer-events: none;
     transition: 0s ease-in;
+    align-items: center;
 }
 
 .slide-img {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
     background-color: black;
     text-align: center;
-    padding: 3rem;
-    width: 200px;
+    width: fit-content;
     border-radius: 10px;
+}
+
+.project-images {
+    border-radius: 10px;
+    max-width: 8.3em;
+    max-height: 9em;
 }
