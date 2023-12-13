@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import ShowProject from './ShowProject';
+import { PreviewObject } from './types'
 
-let pressed = false;
+let sliderGrabbed = false;
 let startX: number;
 let areas: Array<PreviewObject> = [
   { name: "Again", img: "./Images/ProjectImages/again.png" },
@@ -13,42 +14,50 @@ let areas: Array<PreviewObject> = [
   { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png" }];
 
 let projectSelected: boolean = false;
+let dragging: boolean = false;
 
 function handleEvent(event: any) {
-  const slider = document.querySelector(".slider") as HTMLDivElement;
+  const slider = document.querySelector(".slider-inner") as HTMLDivElement;
   if (event.type === 'mousedown') {
-    const offsetX = (document.querySelector('.slider-inner') as HTMLDivElement).offsetLeft;
-    pressed = true;
-    startX = event.nativeEvent.offsetX - offsetX;
-  } else if (event.type === 'mouseenter') {
-    slider.style.cursor = 'grab';
-  } else if (event.type === 'mouseleave') {
-    slider.style.cursor = 'default';
+    sliderGrabbed = true;
+    dragging = false;
   } else if (event.type === 'mouseup') {
-    slider.style.cursor = 'grab';
-    pressed = false;
+    sliderGrabbed = false;
+  } else if (event.type === 'mouseleave') {
+    sliderGrabbed = false;
+    dragging = false;
+  } else if (event.type === 'scroll') {
+    const progressBar = document.querySelector(".inner-bar") as HTMLDivElement;
+    progressBar.style.width = `${getScrollPercentage(slider, progressBar.style.width)}%`
+
+  } else if(event.type === 'wheel' && slider.parentElement){
+    event.preventDefault()
+    slider.parentElement.scrollLeft += event.deltaY;
   }
 }
 
-function handleMouseMove(event: any) {
-  if (!pressed) return;
-  event.preventDefault();
-
-  let x = event.nativeEvent.offsetX;
-
-  const innerSlider = (document.querySelector('.slider-inner') as HTMLDivElement);
-  innerSlider.style.left = `${x - startX}px`;
-  checkBoundaries(innerSlider);
+function getScrollPercentage(slider: HTMLDivElement, currentPercentage: string) {
+  let percentage;
+  if (slider.parentElement) {
+    percentage = ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) * 100)
+  }
+  return percentage ? percentage : currentPercentage;
 }
 
-function checkBoundaries(inner: HTMLDivElement) {
-  const innerRect = inner.getBoundingClientRect();
-  const outerRect = (document.querySelector(".slider") as HTMLDivElement).getBoundingClientRect();
+function handleMouseMove(event: any) {
+  event.preventDefault()
+  event.stopPropagation()
+  dragging = true;
+  const slider = (document.querySelector('.slider-inner') as HTMLDivElement);
+  if (sliderGrabbed && slider.parentElement) {
+    slider.parentElement.scrollLeft -= event.movementX;
+  }
+    
+}
 
-  if (parseInt(inner.style.left) > 0) {
-    inner.style.left = '0px';
-  } else if (innerRect.right < outerRect.right) {
-    inner.style.left = `-${innerRect.width - outerRect.width}px`
+function handleClick(event: any) {
+  if (dragging !== true) {
+    dragging = false;
   }
 }
 
@@ -58,13 +67,18 @@ function App() {
       <div className="App">
         <body style={{ overflow: "hidden" }}>
           <img src='Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
-          <div className="slider" onMouseEnter={handleEvent} onMouseDown={handleEvent} onMouseMove={handleMouseMove} onMouseLeave={handleEvent} onMouseUp={handleEvent}>
-            <div className='slider-inner' >
-              {areas.map((area) => (
-                <div className='slide-img' > {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
-                  {area.name}
-                </div>
-              ))}
+          <div className='slider-wrap'>
+            <div className="slider" onMouseEnter={handleEvent} onMouseDown={handleEvent} onMouseMove={handleMouseMove} onMouseLeave={handleEvent} onMouseUp={handleEvent} onScroll={handleEvent}>
+              <div className='slider-inner' >
+                {areas.map((area) => (
+                  <div className='slide-img' onClick={handleClick}> {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
+                    {area.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className='progress-bar'>
+              <div className='inner-bar'></div>
             </div>
           </div>
         </body>
@@ -72,29 +86,10 @@ function App() {
     );
   } else {
     return (
-      <div className="App">
-        <body style={{ overflow: "hidden" }}>
-          <img src='Images/Show.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
-          <div className="slider" onMouseEnter={handleEvent} onMouseDown={handleEvent} onMouseMove={handleMouseMove} onMouseLeave={handleEvent} onMouseUp={handleEvent}>
-            <div className='slider-inner' >
-              {areas.map((area) => (
-                <div className='slide-img' > {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
-                  {area.name}
-                </div>
-              ))}
-            </div>
-          </div>
-        </body>
-      </div>
+      <ShowProject />
     );
   }
-  
+
 }
 
 export default App;
-
-interface PreviewObject {
-  name: string;
-  url?: string;
-  img: string;
-}
