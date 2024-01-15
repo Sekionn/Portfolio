@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import ShowProject from './ShowProject';
 import { PreviewObject } from './types'
 
-let sliderGrabbed = false;
-let startX: number;
-let areas: Array<PreviewObject> = [
+export class App extends Component {
+  state={
+    projectSelected: undefined
+  }
+sliderGrabbed = false;
+areas: Array<PreviewObject> = [
   { name: "Again", img: "./Images/ProjectImages/again.png" },
   { name: "Boss Slayers", img: "./Images/ProjectImages/BossSlayers.png" },
   { name: "Escape", img: "./Images/ProjectImages/Escape.png" },
@@ -13,22 +16,22 @@ let areas: Array<PreviewObject> = [
   { name: "School", img: "./Images/ProjectImages/School.png" },
   { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png" }];
 
-let projectSelected: boolean = false;
-let dragging: boolean = false;
+projectSelected?: PreviewObject;
+dragging: boolean = false;
 
-function handleEvent(event: any) {
+handleEvent(event: any) {
   const slider = document.querySelector(".slider-inner") as HTMLDivElement;
   if (event.type === 'mousedown') {
-    sliderGrabbed = true;
-    dragging = false;
+    this.sliderGrabbed = true;
+    this.dragging = false;
   } else if (event.type === 'mouseup') {
-    sliderGrabbed = false;
+    this.sliderGrabbed = false;
   } else if (event.type === 'mouseleave') {
-    sliderGrabbed = false;
-    dragging = false;
+    this.sliderGrabbed = false;
+    this.dragging = false;
   } else if (event.type === 'scroll') {
     const progressBar = document.querySelector(".inner-bar") as HTMLDivElement;
-    progressBar.style.width = `${getScrollPercentage(slider, progressBar.style.width)}%`
+    progressBar.style.width = `${this.getScrollPercentage(slider, progressBar.style.width)}%`
 
   } else if(event.type === 'wheel' && slider.parentElement){
     event.preventDefault()
@@ -36,7 +39,7 @@ function handleEvent(event: any) {
   }
 }
 
-function getScrollPercentage(slider: HTMLDivElement, currentPercentage: string) {
+getScrollPercentage(slider: HTMLDivElement, currentPercentage: string) {
   let percentage;
   if (slider.parentElement) {
     percentage = ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) * 100)
@@ -44,34 +47,36 @@ function getScrollPercentage(slider: HTMLDivElement, currentPercentage: string) 
   return percentage ? percentage : currentPercentage;
 }
 
-function handleMouseMove(event: any) {
+handleMouseMove(event: any) {
   event.preventDefault()
   event.stopPropagation()
-  dragging = true;
+  this.dragging = true;
   const slider = (document.querySelector('.slider-inner') as HTMLDivElement);
-  if (sliderGrabbed && slider.parentElement) {
+  if (this.sliderGrabbed && slider.parentElement) {
     slider.parentElement.scrollLeft -= event.movementX;
   }
     
 }
 
-function handleClick(event: any) {
-  if (dragging !== true) {
-    dragging = false;
+handleClick(clickedObject: PreviewObject) {
+  if (this.dragging !== true) {
+    this.projectSelected = clickedObject;
+    this.setState({projectSelected: clickedObject})
   }
 }
 
-function App() {
-  if (!projectSelected) {
+render() {
+  console.log('render', this.projectSelected)
+  if (!this.projectSelected) {
     return (
       <div className="App">
         <body style={{ overflow: "hidden" }}>
           <img src='Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
           <div className='slider-wrap'>
-            <div className="slider" onMouseEnter={handleEvent} onMouseDown={handleEvent} onMouseMove={handleMouseMove} onMouseLeave={handleEvent} onMouseUp={handleEvent} onScroll={handleEvent}>
+            <div className="slider"  onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)}>
               <div className='slider-inner' >
-                {areas.map((area) => (
-                  <div className='slide-img' onClick={handleClick}> {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
+                {this.areas.map((area) => (
+                  <div className='slide-img' title={area.name} onClick={() => this.handleClick(area)}> {area.img ? <img className='project-images' src={area.img} alt="" /> : ''}
                     {area.name}
                   </div>
                 ))}
@@ -91,5 +96,4 @@ function App() {
   }
 
 }
-
-export default App;
+}
