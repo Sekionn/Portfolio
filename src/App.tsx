@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ShowProject from './ShowProject';
+import {ShowProject} from './ShowProject';
 import { PreviewObject } from './types'
 
 export class App extends Component {
@@ -9,12 +9,12 @@ export class App extends Component {
   }
 sliderGrabbed = false;
 areas: Array<PreviewObject> = [
-  { name: "Again", img: "./Images/ProjectImages/again.png" },
-  { name: "Boss Slayers", img: "./Images/ProjectImages/BossSlayers.png" },
-  { name: "Escape", img: "./Images/ProjectImages/Escape.png" },
-  { name: "Introvert Shopping", img: "./Images/ProjectImages/IntroShop.png" },
-  { name: "School", img: "./Images/ProjectImages/School.png" },
-  { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png" }];
+  { name: "Again", img: "./Images/ProjectImages/again.png", key: "again" },
+  { name: "Boss Slayers", img: "./Images/ProjectImages/BossSlayers.png", key: "BossSlayers" },
+  { name: "Escape", img: "./Images/ProjectImages/Escape.png", key: "Escape" },
+  { name: "Introvert Shopping", img: "./Images/ProjectImages/IntroShop.png", key: "IntroShop" },
+  { name: "School", img: "./Images/ProjectImages/School.png", key: "School" },
+  { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png", key: "silkroutegame" }];
 
 projectSelected?: PreviewObject;
 dragging: boolean = false;
@@ -66,7 +66,6 @@ handleClick(clickedObject: PreviewObject) {
 }
 
 render() {
-  console.log('render', this.projectSelected)
   if (!this.projectSelected) {
     return (
       <div className="App">
@@ -91,7 +90,7 @@ render() {
     );
   } else {
     return (
-      <ShowProject />
+      <ShowProject selectedProject={this.projectSelected} />
     );
   }
 

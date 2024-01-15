@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import { PreviewObject } from './types'
+import projectInfo from "./projectInfo/projectInfo.json";
+
+type values={
+  selectedProject: PreviewObject
+}
+export class ShowProject extends Component<values>{
 
 
-
-function ShowProject() {
-
+render() {
+  
     return (
-      <div>Hello</div>
+      <div>{projectInfo.Again}</div>
     );
   
 }
 
-export default ShowProject;
+}
