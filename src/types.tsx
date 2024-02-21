@@ -4,3 +4,12 @@ export interface PreviewObject {
     img: string;
     key: string;
 }
+
+export interface projectInfoType {
+    again: string;
+    bossSlayers: string;
+    escape: string;
+    introShop: string;
+    school: string;
+    silkroutegame: string;
+  }
