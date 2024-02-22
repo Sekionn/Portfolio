@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import ShowProject from './ShowProject';
-import { PreviewObject } from './types'
+import { ShowProject } from './ShowProject';
+import { IProps, IState, PreviewObject } from './types'
 
-export class App extends Component {
-  state = {
-    projectSelected: undefined
+export class App extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      selectedProject: undefined
+    };
   }
+
   sliderGrabbed = false;
   areas: Array<PreviewObject> = [
     { name: "Again", img: "./Images/ProjectImages/again.png", key: "again" },
@@ -18,6 +23,12 @@ export class App extends Component {
 
   projectSelected?: PreviewObject;
   dragging: boolean = false;
+
+  changeProject() { 
+    this.setState(() => ({
+      selectedProject: undefined,
+    }));
+  }
 
   handleEvent(event: any) {
     const slider = document.querySelector(".slider-inner") as HTMLDivElement;
@@ -55,18 +66,19 @@ export class App extends Component {
     if (this.sliderGrabbed && slider.parentElement) {
       slider.parentElement.scrollLeft -= event.movementX;
     }
-
   }
 
   handleClick(clickedObject: PreviewObject) {
     if (this.dragging !== true) {
       this.projectSelected = clickedObject;
-      this.setState({ projectSelected: clickedObject })
+      this.setState(() => ({
+        selectedProject: clickedObject,
+      }));
     }
   }
 
   render() {
-    if (!this.projectSelected) {
+    if (!this.state.selectedProject) {
       return (
         <div className="App">
           <body style={{ overflow: "hidden" }}>
@@ -90,7 +102,7 @@ export class App extends Component {
       );
     } else {
       return (
-        <ShowProject selectedProject={this.projectSelected} />
+        <ShowProject selectedProject={this.state.selectedProject!} changeProject={ this.changeProject.bind(this)} />
       );
     }
 

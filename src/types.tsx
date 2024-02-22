@@ -12,4 +12,12 @@ export interface projectInfoType {
     introShop: string;
     school: string;
     silkroutegame: string;
-  }
+}
+
+export interface IProps {
+    testMethod?: Function
+}
+
+export interface IState {
+    selectedProject?: PreviewObject;
+}
