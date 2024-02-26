@@ -29,3 +29,17 @@
     transform: scale(1);
   }
 }
+
+.button {
+  padding: 5px 5px;
+  border-radius: 5px;
+  background-color: rgb(78, 52, 172);
+  color: white;
+  border: 0px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.floatRight {
+  float: right;
+}

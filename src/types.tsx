@@ -3,6 +3,7 @@ export interface PreviewObject {
     url?: string;
     img: string;
     key: string;
+    downloadKey: string;
 }
 
 export interface projectInfoType {
