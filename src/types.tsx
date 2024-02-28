@@ -21,4 +21,5 @@ export interface IProps {
 
 export interface IState {
     selectedProject?: PreviewObject;
+    introShowing?: boolean;
 }

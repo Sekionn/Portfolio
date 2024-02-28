@@ -26,3 +26,20 @@ export function ShowProject({ selectedProject,
   </div>
   );
 }
+
+export function ShowIntro(nextString: String, setToViewed: Function) {
+  return (
+    <div className="App">
+      <body style={{ overflow: "hidden" }}>
+        <img src='Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
+        <div className='introContainer'>
+          <div className='introTextContainer'>
+            {nextString}
+          </div>
+          <br />
+          <button className='button bottomRightCorner' onClick={() => setToViewed()}>Proceed</button>
+        </div>
+      </body>
+    </div>
+  );
+}

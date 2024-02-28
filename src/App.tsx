@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { ShowProject } from './ShowProject';
+import { ShowProject, ShowIntro } from './ShowProject';
 import { IProps, IState, PreviewObject } from './types'
 
 export class App extends Component<IProps, IState> {
@@ -8,9 +8,16 @@ export class App extends Component<IProps, IState> {
     super(props);
 
     this.state = {
-      selectedProject: undefined
+      selectedProject: undefined,
+      introShowing: localStorage.getItem("IntroWasViewed") ? false : true,
     };
   }
+
+  introText: Array<any> = [
+    <p style={{ display: "inline-block" }}>Welcome to JUULS TRINKETS.<br />
+      The best bargain bin this side of Storebaelt, here you can find anything your heart desires.<p style={{ fontSize: "10px" }}>If we have it in stock.</p>
+    </p>
+  ]
 
   sliderGrabbed = false;
   areas: Array<PreviewObject> = [
@@ -24,9 +31,17 @@ export class App extends Component<IProps, IState> {
   projectSelected?: PreviewObject;
   dragging: boolean = false;
 
-  changeProject() { 
+  changeProject() {
     this.setState(() => ({
       selectedProject: undefined,
+    }));
+  }
+
+  setIntroToViewed() {
+    localStorage.setItem("IntroWasViewed", "true");
+    this.setState(() => ({
+      selectedProject: undefined,
+      introShowing: false
     }));
   }
 
@@ -78,6 +93,13 @@ export class App extends Component<IProps, IState> {
   }
 
   render() {
+    if (this.state.introShowing) {
+      return ShowIntro(this.introText[0], this.setIntroToViewed.bind(this));
+    }
+    return this.showProject();
+  }
+
+  showProject() {
     if (!this.state.selectedProject) {
       return (
         <div className="App">
@@ -102,9 +124,8 @@ export class App extends Component<IProps, IState> {
       );
     } else {
       return (
-        <ShowProject selectedProject={this.state.selectedProject!} changeProject={ this.changeProject.bind(this)} />
+        <ShowProject selectedProject={this.state.selectedProject!} changeProject={this.changeProject.bind(this)} />
       );
     }
-
   }
 }
