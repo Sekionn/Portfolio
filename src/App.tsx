@@ -24,7 +24,7 @@ export class App extends Component<IProps, IState> {
     { name: "Again", img: "./Images/ProjectImages/again.png", key: "again", downloadKey: "Again.zip" },
     { name: "Boss Slayers", img: "./Images/ProjectImages/bossSlayers.png", key: "BossSlayers", downloadKey: "BossSlayers.zip" },
     { name: "Escape", img: "./Images/ProjectImages/escape.png", key: "Escape", downloadKey: "Escape.zip" },
-    { name: "Introvert Shopping", img: "./Images/ProjectImages/IntroShop.png", key: "introShop", downloadKey: "IntrovertShopping.zip" },
+    { name: "Introvert Shopping", img: "./Images/ProjectImages/introShop.png", key: "introShop", downloadKey: "IntrovertShopping.zip" },
     { name: "School", img: "./Images/ProjectImages/school.png", key: "School", downloadKey: "School.zip" },
     { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png", key: "silkroutegame", downloadKey: "Silkroute.zip" }];
 
