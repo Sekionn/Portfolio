@@ -21,7 +21,7 @@ export class App extends Component<IProps, IState> {
 
   sliderGrabbed = false;
   areas: Array<PreviewObject> = [
-    { name: "Again", img: "./Images/ProjectImages/again.png", key: "again", downloadKey: "again.zip" },
+    { name: "Again", img: "./Images/ProjectImages/again.png", key: "again", downloadKey: "Again.zip" },
     { name: "Boss Slayers", img: "./Images/ProjectImages/bossSlayers.png", key: "BossSlayers", downloadKey: "BossSlayers.zip" },
     { name: "Escape", img: "./Images/ProjectImages/escape.png", key: "Escape", downloadKey: "Escape.zip" },
     { name: "Introvert Shopping", img: "./Images/ProjectImages/introShop.png", key: "introShop", downloadKey: "IntrovertShopping.zip" },
