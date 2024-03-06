@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+p {
+  display: inline;
+}
+
+.slider-wrap {
+  position: absolute;
+  top: 35%;
+  left: 27%;
+  width: 45%;
+  height: 210px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  cursor: grab;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.slider-inner {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  /* width: 1500px; */
+  height: 100%;
+  display: flex;
+}
+
+.slide-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  top: 1%;
+  border-radius: 10px;
+  background-color: black;
+  /* border: 1px solid rgb(0, 0, 0); */
+  margin: 0px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-images {
+  border-radius: 10px;
+  max-width: 8.3em;
+  max-height: 6.5em;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.inner-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(62, 62, 62);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slider {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.introContainer {
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  width: 60%;
+  height: 30%;
+  border-radius: 5px;
+  border: 5px solid grey;
+  background-color: black;
+  overflow-y: scroll;
+  animation: createBox .5s;
+  padding: 10px 10px;
+}
+
+.introTextContainer {
+  overflow: hidden;
+  letter-spacing: .15em;
+  white-space: pre-wrap;
+  /* animation: typing 3.5s steps(100, end) */
+}
+
+.bottomRightCorner{
+  float: right;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
