@@ -5,6 +5,10 @@
   font-size: 20px;
 }
 
+p {
+  display: inline;
+}
+
 .slider-wrap {
   position: absolute;
   top: 35%;

@@ -1,5 +1,5 @@
 import './ShowProject.css';
-import { PreviewObject, projectInfoType, IProps, IState } from './types'
+import { PreviewObject, projectInfoType } from './types'
 import projectInfo from "./projectInfo/projectInfo.json";
 
 
@@ -12,6 +12,8 @@ export function ShowProject({ selectedProject,
     <body style={{ overflow: "hidden" }}>
       <img src={backgroundImages[Math.floor((Math.random() * backgroundImages.length))]} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
       <div className='infoContainer'>
+        <div style={{ width: "100%", borderBottom: "solid 1px white" }}><div style={{ fontSize: "50px" }}>{selectedProject.name}</div></div>
+        <br />
         <img src={selectedProject.img} alt='Not available' className='previewImage' />
         <div className='descriptionContainer'>
           {info[selectedProject.key as keyof projectInfoType]}

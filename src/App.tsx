@@ -15,7 +15,7 @@ export class App extends Component<IProps, IState> {
 
   introText: Array<any> = [
     <p style={{ display: "inline-block" }}>Welcome to JUULS TRINKETS.<br />
-      The best bargain bin this side of Storebaelt, here you can find anything your heart desires.<p style={{ fontSize: "10px" }}>If we have it in stock.</p>
+      The best bargain bin this side of Storebaelt, here you can find anything your heart desires. <p style={{ fontSize: "10px" }}>If we have it in stock.</p>
     </p>
   ]
 
