@@ -20,7 +20,7 @@ export function ShowProject({ selectedProject,
         </div>
         <br />
         <button className='button' onClick={() => changeProject()}>Back</button>
-        <a className='floatRight' href={`/downloads/${selectedProject.downloadKey}`} download={selectedProject.downloadKey}>
+        <a className='floatRight' href={`/Portfolio/downloads/${selectedProject.downloadKey}`} download={selectedProject.downloadKey}>
           <button className='button'>Download</button>
         </a>
       </div>
