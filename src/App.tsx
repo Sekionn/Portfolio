@@ -104,7 +104,7 @@ export class App extends Component<IProps, IState> {
       return (
         <div className="App">
           <body style={{ overflow: "hidden" }}>
-            <img src='Portfolio/Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
+            <img src='Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
             <div className='slider-wrap'>
               <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)}>
                 <div className='slider-inner' >
