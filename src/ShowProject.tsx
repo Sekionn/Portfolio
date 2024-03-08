@@ -7,7 +7,7 @@ const info = projectInfo as projectInfoType
 export function ShowProject({ selectedProject,
   changeProject
 }: { selectedProject: PreviewObject, changeProject: Function }) {
-  const backgroundImages = ['Images/Show.png', 'Images/ShowSecond.png']
+  const backgroundImages = ['Portfolio/Images/Show.png', 'Portfolio/Images/ShowSecond.png']
   return (<div className="App">
     <body style={{ overflow: "hidden" }}>
       <img src={backgroundImages[Math.floor((Math.random() * backgroundImages.length))]} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />

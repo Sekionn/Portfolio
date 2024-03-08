@@ -21,12 +21,12 @@ export class App extends Component<IProps, IState> {
 
   sliderGrabbed = false;
   areas: Array<PreviewObject> = [
-    { name: "Again", img: "./Images/ProjectImages/again.png", key: "again", downloadKey: "Again.zip" },
-    { name: "Boss Slayers", img: "./Images/ProjectImages/bossSlayers.png", key: "BossSlayers", downloadKey: "BossSlayers.zip" },
-    { name: "Escape", img: "./Images/ProjectImages/escape.png", key: "Escape", downloadKey: "Escape.zip" },
-    { name: "Introvert Shopping", img: "./Images/ProjectImages/introShop.png", key: "introShop", downloadKey: "IntrovertShopping.zip" },
-    { name: "School", img: "./Images/ProjectImages/school.png", key: "School", downloadKey: "School.zip" },
-    { name: "Silk Route", img: "./Images/ProjectImages/silkroutegame.png", key: "silkroutegame", downloadKey: "Silkroute.zip" }];
+    { name: "Again", img: "Portfolio/Images/ProjectImages/again.png", key: "again", downloadKey: "Again.zip" },
+    { name: "Boss Slayers", img: "Portfolio/Images/ProjectImages/bossSlayers.png", key: "bossSlayers", downloadKey: "BossSlayers.zip" },
+    { name: "Escape", img: "Portfolio/Images/ProjectImages/escape.png", key: "escape", downloadKey: "Escape.zip" },
+    { name: "Introvert Shopping", img: "Portfolio/Images/ProjectImages/introShop.png", key: "introShop", downloadKey: "IntrovertShopping.zip" },
+    { name: "School", img: "Portfolio/Images/ProjectImages/school.png", key: "school", downloadKey: "School.zip" },
+    { name: "Silk Route", img: "Portfolio/Images/ProjectImages/silkroutegame.png", key: "silkroutegame", downloadKey: "Silkroute.zip" }];
 
   projectSelected?: PreviewObject;
   dragging: boolean = false;
@@ -104,7 +104,7 @@ export class App extends Component<IProps, IState> {
       return (
         <div className="App">
           <body style={{ overflow: "hidden" }}>
-            <img src='Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
+            <img src='Portfolio/Images/Welcome.png' alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
             <div className='slider-wrap'>
               <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)}>
                 <div className='slider-inner' >
