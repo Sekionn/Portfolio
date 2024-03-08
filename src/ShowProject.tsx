@@ -10,11 +10,11 @@ export function ShowProject({ selectedProject,
   const backgroundImages = ['Images/Show.png', 'Images/ShowSecond.png']
   return (<div className="App">
     <body style={{ overflow: "hidden" }}>
-      <img src={backgroundImages[Math.floor((Math.random() * backgroundImages.length))]} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
+      <img src={require("./"+backgroundImages[Math.floor((Math.random() * backgroundImages.length))])} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
       <div className='infoContainer'>
         <div style={{ width: "100%", borderBottom: "solid 1px white" }}><div style={{ fontSize: "50px" }}>{selectedProject.name}</div></div>
         <br />
-        <img src={selectedProject.img} alt='Not available' className='previewImage' />
+        <img src={require("./"+selectedProject.img)} alt='Not available' className='previewImage' />
         <div className='descriptionContainer'>
           {info[selectedProject.key as keyof projectInfoType]}
         </div>
