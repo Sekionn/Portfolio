@@ -106,7 +106,7 @@ export class App extends Component<IProps, IState> {
           <body style={{ overflow: "hidden" }}>
             <img src={require('./Images/Welcome.png')} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
             <div className='slider-wrap'>
-              <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)}>
+              <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)} onWheel={(e) => this.handleEvent(e)}>
                 <div className='slider-inner' >
                   {this.areas.map((area) => (
                     <div className='slide-img' title={area.name} onClick={() => this.handleClick(area)}> {area.img ? <img className='project-images' src={require("./"+area.img)} alt="" /> : ''}
