@@ -1,13 +1,25 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.eeb216cb.css",
-    "main.js": "/Portfolio/static/js/main.debefe87.js",
+    "main.js": "/Portfolio/static/js/main.d3bb72cc.js",
+    "static/js/787.7da95b79.chunk.js": "/Portfolio/static/js/787.7da95b79.chunk.js",
+    "static/media/Welcome.png": "/Portfolio/static/media/Welcome.82ba7422e1c7bac358d7.png",
+    "static/media/ShowSecond.png": "/Portfolio/static/media/ShowSecond.afb4e651b12bc9eccf06.png",
+    "static/media/Show.png": "/Portfolio/static/media/Show.70acdd2bdeedcf869971.png",
+    "static/media/silkroutegame.png": "/Portfolio/static/media/silkroutegame.c415110249f3d28a4a1e.png",
+    "static/media/again.png": "/Portfolio/static/media/again.07d10f1990f22ac0d1ab.png",
+    "static/media/bossSlayers.png": "/Portfolio/static/media/bossSlayers.77da507094b006dd27a4.png",
+    "static/media/escape.png": "/Portfolio/static/media/escape.38d17cf193d9bb2956b1.png",
+    "static/media/introShop.png": "/Portfolio/static/media/introShop.5823a18620dfc12b0b08.png",
+    "static/media/index.cjs": "/Portfolio/static/media/index.87283f34b94ab8669cb4.cjs",
+    "static/media/logo.svg": "/Portfolio/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/Portfolio/index.html",
     "main.eeb216cb.css.map": "/Portfolio/static/css/main.eeb216cb.css.map",
-    "main.debefe87.js.map": "/Portfolio/static/js/main.debefe87.js.map"
+    "main.d3bb72cc.js.map": "/Portfolio/static/js/main.d3bb72cc.js.map",
+    "787.7da95b79.chunk.js.map": "/Portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eeb216cb.css",
-    "static/js/main.debefe87.js"
+    "static/js/main.d3bb72cc.js"
   ]
 }
