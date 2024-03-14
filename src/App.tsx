@@ -15,12 +15,13 @@ export class App extends Component<IProps, IState> {
 
   introText: Array<any> = [
     <p style={{ display: "inline-block" }}>Welcome to JUULS TRINKETS.<br />
-      The best bargain bin this side of Storebaelt, here you can find anything your heart desires. <p style={{ fontSize: "10px" }}>If we have it in stock.</p>
+      The best bargain bin west of Storebaelt, here you can find anything your heart desires. <p style={{ fontSize: "10px" }}>If we have it in stock.</p>
     </p>
   ]
 
   sliderGrabbed = false;
   areas: Array<PreviewObject> = [
+    { name: "EG Ajour", img: "Images/ProjectImages/eg_ajour_logo.svg", key: "eg_ajour", imageStyle: "logo" },
     { name: "Again", img: "Images/ProjectImages/again.png", key: "again", downloadKey: "Again.zip" },
     { name: "Boss Slayers", img: "Images/ProjectImages/bossSlayers.png", key: "bossSlayers", downloadKey: "BossSlayers.zip" },
     { name: "Escape", img: "Images/ProjectImages/escape.png", key: "escape", downloadKey: "Escape.zip" },

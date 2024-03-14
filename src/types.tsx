@@ -2,8 +2,9 @@ export interface PreviewObject {
     name: string;
     url?: string;
     img: string;
+    imageStyle?: string;
     key: string;
-    downloadKey: string;
+    downloadKey?: string;
 }
 
 export interface projectInfoType {
