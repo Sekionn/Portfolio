@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c74e1e0e.css",
-    "main.js": "/Portfolio/static/js/main.cbed73f2.js",
+    "main.css": "/Portfolio/static/css/main.441b5ab8.css",
+    "main.js": "/Portfolio/static/js/main.6ddbe66f.js",
     "static/js/787.7da95b79.chunk.js": "/Portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/Welcome.png": "/Portfolio/static/media/Welcome.82ba7422e1c7bac358d7.png",
     "static/media/ShowSecond.png": "/Portfolio/static/media/ShowSecond.afb4e651b12bc9eccf06.png",
     "static/media/Show.png": "/Portfolio/static/media/Show.70acdd2bdeedcf869971.png",
     "static/media/silkroutegame.png": "/Portfolio/static/media/silkroutegame.c415110249f3d28a4a1e.png",
+    "static/media/CV-Sebastian-Juul-Knudsen-English.pdf": "/Portfolio/static/media/CV-Sebastian-Juul-Knudsen-English.9d922c7d11f7aa8c2c44.pdf",
     "static/media/again.png": "/Portfolio/static/media/again.07d10f1990f22ac0d1ab.png",
     "static/media/bossSlayers.png": "/Portfolio/static/media/bossSlayers.77da507094b006dd27a4.png",
     "static/media/escape.png": "/Portfolio/static/media/escape.38d17cf193d9bb2956b1.png",
@@ -15,12 +16,12 @@
     "static/media/logo.svg": "/Portfolio/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "static/media/eg_ajour_logo.svg": "/Portfolio/static/media/eg_ajour_logo.2500b68409b6952ea548.svg",
     "index.html": "/Portfolio/index.html",
-    "main.c74e1e0e.css.map": "/Portfolio/static/css/main.c74e1e0e.css.map",
-    "main.cbed73f2.js.map": "/Portfolio/static/js/main.cbed73f2.js.map",
+    "main.441b5ab8.css.map": "/Portfolio/static/css/main.441b5ab8.css.map",
+    "main.6ddbe66f.js.map": "/Portfolio/static/js/main.6ddbe66f.js.map",
     "787.7da95b79.chunk.js.map": "/Portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c74e1e0e.css",
-    "static/js/main.cbed73f2.js"
+    "static/css/main.441b5ab8.css",
+    "static/js/main.6ddbe66f.js"
   ]
 }
