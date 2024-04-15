@@ -31,7 +31,7 @@ export class App extends Component<IProps, IState> {
 
   projectSelected?: PreviewObject;
   dragging: boolean = false;
-  curriculum: PreviewCVObject = {name: "Curriculum vitae", key: "curriculum_vitae", downloadKey: "curriculum_vitae.pdf"};
+  curriculum: PreviewCVObject = {name: "Curriculum vitae", key: "curriculum_vitae", img:"Images/icons8-document-64.png", downloadKey: "curriculum_vitae.pdf"};
 
   changeProject() {
     this.setState(() => ({
@@ -127,7 +127,7 @@ export class App extends Component<IProps, IState> {
           <body style={{ overflow: "hidden" }}>
             <img src={require('./Images/Welcome.png')} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
             <div className='slider-wrap'>
-            <div className='cv-item' onClick={() => this.handleCVClick(this.curriculum)}>{this.curriculum.name}</div>
+            <div className='cv-item' onClick={() => this.handleCVClick(this.curriculum)}><img className='project-images' src={require("./"+this.curriculum.img)} alt="" />{this.curriculum.name}</div>
               <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)} onWheel={(e) => this.handleEvent(e)}>
                 <div className='slider-inner' >
                   {this.areas.map((area) => (

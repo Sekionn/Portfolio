@@ -105,9 +105,7 @@ export function ShowCV({ selectedProject,
       <div className='infoContainer'>
           <object data={require("./pdfs/CV-Sebastian-Juul-Knudsen-English.pdf")} type="application/pdf" style={{width: "100%", height:"100%"}}></object>
           <br />
-
           <button className='button' onClick={() => changeProject()}>Back</button>
-
       </div>
     </body>
   </div>

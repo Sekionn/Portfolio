@@ -10,6 +10,7 @@ export interface PreviewObject {
 export interface PreviewCVObject {
     name: string;
     key: string;
+    img: string;
     downloadKey?: string;
 }
 
