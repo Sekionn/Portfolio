@@ -39,6 +39,25 @@ p {
   display: flex;
 }
 
+.cv-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  top: -10%;
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  -webkit-animation: spin 4s forwards;
+  -moz-animation: spin 4s forwards;
+  animation: spin 1s forwards;
+}
+
 .slide-img {
   position: relative;
   display: flex;
@@ -112,19 +131,30 @@ p {
   overflow: hidden;
   letter-spacing: .15em;
   white-space: pre-wrap;
-  /* animation: typing 3.5s steps(100, end) */
 }
 
-.bottomRightCorner{
+.bottomRightCorner {
   float: right;
 }
 
-@keyframes typing {
-  from {
-    width: 0
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(-135deg);
+    -moz-transform-origin: bottom right;
   }
+}
 
-  to {
-    width: 100%
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(-135deg);
+    -webkit-transform-origin: bottom right;
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(-135deg);
+    transform-origin: bottom right;
+    transform: rotate(-135deg);
   }
 }

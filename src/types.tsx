@@ -7,6 +7,12 @@ export interface PreviewObject {
     downloadKey?: string;
 }
 
+export interface PreviewCVObject {
+    name: string;
+    key: string;
+    downloadKey?: string;
+}
+
 export interface projectInfoType {
     again: string;
     bossSlayers: string;
@@ -23,4 +29,6 @@ export interface IProps {
 export interface IState {
     selectedProject?: PreviewObject;
     introShowing?: boolean;
+    cvSelected?: boolean;
+    cvData?: PreviewCVObject;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { ShowProject, ShowIntro } from './ShowProject';
-import { IProps, IState, PreviewObject } from './types'
+import { ShowProject, ShowIntro, ShowCV } from './ShowProject';
+import { IProps, IState, PreviewCVObject, PreviewObject } from './types'
 
 export class App extends Component<IProps, IState> {
   constructor(props: IProps) {
@@ -31,10 +31,17 @@ export class App extends Component<IProps, IState> {
 
   projectSelected?: PreviewObject;
   dragging: boolean = false;
+  curriculum: PreviewCVObject = {name: "Curriculum vitae", key: "curriculum_vitae", downloadKey: "curriculum_vitae.pdf"};
 
   changeProject() {
     this.setState(() => ({
       selectedProject: undefined,
+    }));
+  }
+  changeCV() {
+    this.setState(() => ({
+      cvSelected: false,
+      cvData: undefined,
     }));
   }
 
@@ -93,9 +100,22 @@ export class App extends Component<IProps, IState> {
     }
   }
 
+  handleCVClick(clickedObject: PreviewCVObject){
+    this.setState(() => ({
+      cvSelected: true,
+      cvData: clickedObject
+    }));
+  }
+
   render() {
     if (this.state.introShowing) {
       return ShowIntro(this.introText[0], this.setIntroToViewed.bind(this));
+    }
+
+    if (this.state.cvSelected) {
+      return (
+        <ShowCV selectedProject={this.state.cvData!} changeProject={this.changeCV.bind(this)} />
+      );    
     }
     return this.showProject();
   }
@@ -107,6 +127,7 @@ export class App extends Component<IProps, IState> {
           <body style={{ overflow: "hidden" }}>
             <img src={require('./Images/Welcome.png')} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
             <div className='slider-wrap'>
+            <div className='cv-item' onClick={() => this.handleCVClick(this.curriculum)}>{this.curriculum.name}</div>
               <div className="slider" onMouseEnter={(e) => this.handleEvent(e)} onMouseDown={(e) => this.handleEvent(e)} onMouseMove={(e) => this.handleMouseMove(e)} onMouseLeave={(e) => this.handleEvent(e)} onMouseUp={(e) => this.handleEvent(e)} onScroll={(e) => this.handleEvent(e)} onWheel={(e) => this.handleEvent(e)}>
                 <div className='slider-inner' >
                   {this.areas.map((area) => (

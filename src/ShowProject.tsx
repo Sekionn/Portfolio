@@ -1,5 +1,5 @@
 import './ShowProject.css';
-import { PreviewObject, projectInfoType } from './types'
+import { PreviewCVObject, PreviewObject, projectInfoType } from './types'
 import projectInfo from "./projectInfo/projectInfo.json";
 
 function AddDownloadButton({ downloadKey }: { downloadKey?: string }) {
@@ -92,5 +92,24 @@ export function ShowIntro(nextString: String, setToViewed: Function) {
         </div>
       </body>
     </div>
+  );
+}
+
+export function ShowCV({ selectedProject,
+  changeProject
+}: { selectedProject: PreviewCVObject, changeProject: Function }) {
+  const backgroundImages = ['Images/Show.png', 'Images/ShowSecond.png']
+  return (<div className="App">
+    <body style={{ overflow: "hidden" }}>
+      <img src={require("./" + backgroundImages[Math.floor((Math.random() * backgroundImages.length))])} alt='Not available' style={{ width: "100vw", height: "100vh", objectFit: "contain" }} />
+      <div className='infoContainer'>
+          <object data={require("./pdfs/CV-Sebastian-Juul-Knudsen-English.pdf")} type="application/pdf" style={{width: "100%", height:"100%"}}></object>
+          <br />
+
+          <button className='button' onClick={() => changeProject()}>Back</button>
+
+      </div>
+    </body>
+  </div>
   );
 }
