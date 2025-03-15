@@ -37,7 +37,7 @@ function ajourInfoText() {
     These include:
     <ul style={{display:'list-item', paddingInlineStart:'40px'}}>
       <li>Implementing an image cropper with cropperjs.</li>
-      <li>Implementing an image viwer where you can add coordinate points to the image with zoom and dragging functionality and the possibility for re-centering the image, this was done using the HTML canvas element.</li>
+      <li>Implementing an image viewer where you can add coordinate points to the image with zoom and dragging functionality and the possibility for re-centering the image, this was done using the HTML canvas element.</li>
       <li>Re-writing and updating design of 1,5 system sections from MVC/Javascript to Aurelia/Typescript.*</li>
       <li>Re-writing the Cypress test Suite in the Playwright framework.</li>
       <li>Teaching the new student developer how to write tests in both Cypress and Playwright.</li>
