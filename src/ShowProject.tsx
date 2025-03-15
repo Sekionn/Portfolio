@@ -47,7 +47,7 @@ function ajourInfoText() {
     <p style={{ fontSize: "10px" }}>*These are not small sections they are basically the equivalent of a meduim - large sized web sites in terms of functionality.</p>
     <br />
     <br />
-    Since The Ajour system is blocked by payment and i don't contractually own the code i produce while working here, i can't show any images from the app.
+    Since The Ajour system is behind a paywall and i don't contractually own the code i produced while working there, i can't show any images from the app.
     <br />
     To learn more about Ajour check out their website by clicking the button below.
   </div>
